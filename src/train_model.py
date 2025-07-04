@@ -76,7 +76,7 @@ class ModelTraining:
             f1 = f1_score(self.y_test , y_pred,  average="weighted")
 
             mlflow.log_metric("accuracy" , accuracy)
-            mlflow.log_metric("Precison" , precision)
+            mlflow.log_metric("Precision" , precision)
             mlflow.log_metric("Recall Score " , recall)
             mlflow.log_metric("F1_score" , f1)
 
