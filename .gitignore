@@ -1,5 +1,3 @@
 /data/models/
 *.pyc
 venv
-dvc.yaml
-params.yaml

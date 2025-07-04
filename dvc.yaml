@@ -1,0 +1,19 @@
+stages:
+  preprocess:
+    cmd: python src/data_preprocessing.py
+    deps:
+    - data/raw/data.csv
+    - src/data_preprocessing.py
+    outs:
+    - artifacts/processed
+  train_model:
+    cmd: python src/train_model.py
+    deps:
+    - artifacts/processed
+    - src/train_model.py
+    params:
+    - train.learning_rate
+    - train.max_depth
+    - train.n_estimators
+    outs:
+    - artifacts/models
